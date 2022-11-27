@@ -1,15 +1,16 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-import AssessmentDetail from "../screens/Assessment-detail";
-import Assessment from "../screens/Assessment-home";
+
+import Test from "../screens/Test";
+import Home from "../screens/Home";
 // you can also import from @react-navigation/native
 
 const screens = {
   Home: {
-    screen: Assessment,
+    screen: Home,
   },
-  Detail: {
-    screen: AssessmentDetail,
+  Test: {
+    screen: Test,
   },
 };
 const AppNavigator = createStackNavigator(screens);

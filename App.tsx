@@ -1,28 +1,13 @@
 import React from "react";
-import {
-  Text,
-  Link,
-  HStack,
-  Center,
-  Heading,
-  Switch,
-  useColorMode,
-  NativeBaseProvider,
-  extendTheme,
-  VStack,
-  Box,
-  InputRightAddon,
-  ScrollView,
-} from "native-base";
+import { NativeBaseProvider, extendTheme } from "native-base";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { proxy, useSnapshot } from "valtio";
 import Assessment from "./src/screens/Assessment-home";
 import AssessmentDetail from "./src/screens/Assessment-detail";
-import AssessmentCam from "./src/screens/Assessment-cam";
-import Flexi from "./src/screens/Flexi";
-
+import AssessmentInstructions from "./src/screens/Assessment-instructions";
+import AssessmentPlay from "./src/screens/Assessment-Play";
 import AppContainer from "./src/Routes/homeStack";
 
 const RootStack = createNativeStackNavigator();
@@ -47,17 +32,19 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <NavigationContainer>
-        <AppContainer />
-
-        {/* <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='Play' component={AssessmentPlay} />
           <Stack.Screen name='Home' component={Assessment} />
           <Stack.Screen name='Detail' component={AssessmentDetail} />
-        </Stack.Navigator> */}
+          <Stack.Screen name='Instructions' component={AssessmentInstructions} />
+        </Stack.Navigator>
       </NavigationContainer>
-      {/* <Flexi /> */}
-      {/* <AssessmentDetail /> */}
-      {/* <AssessmentCam /> */}
-      {/* <Assessment userName={"Betty"} /> */}
     </NativeBaseProvider>
   );
+}
+{
+  /* <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='Home' component={Assessment} />
+          <Stack.Screen name='Detail' component={AssessmentDetail} />
+        </Stack.Navigator> */
 }
