@@ -3,6 +3,7 @@ import { Box, Text, Center, Pressable } from "native-base";
 
 import { Feather, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { useSnapshot } from "valtio";
 const excerName: string = "Hi";
 
 let show = function () {

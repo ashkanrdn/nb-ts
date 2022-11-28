@@ -9,15 +9,22 @@ var _ = require("lodash");
 
 const Exercise = (props: any) => {
   var exerciseInfo = _.toPlainObject(props.exercise);
-
-  var icon = require("../assets/3.png");
+  var tep = exerciseInfo.Exc_Icon;
+  // var pathtemp = require(tep);
   return (
     <Flex direction='row' alignItems='center' alignContent='center'>
       <Box p='2' ml='3'>
-        <Image source={require("../assets/3.png")} alt='Alternative Text'></Image>
+        <Image
+          resizeMode='contain'
+          w='16'
+          h='20'
+          source={{
+            uri: exerciseInfo.Exc_Icon,
+          }}
+          alt='Alternative Text'></Image>
       </Box>
-      <Box p='2'>
-        <Text fontSize='4xl' color='trueGray.500'>
+      <Box p='1'>
+        <Text fontSize='2xl' color='trueGray.500'>
           {exerciseInfo.Exc_name}
         </Text>
       </Box>

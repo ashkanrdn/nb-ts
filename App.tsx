@@ -33,8 +33,8 @@ export default function App() {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name='Play' component={AssessmentPlay} />
           <Stack.Screen name='Home' component={Assessment} />
+          <Stack.Screen name='Play' component={AssessmentPlay} />
           <Stack.Screen name='Detail' component={AssessmentDetail} />
           <Stack.Screen name='Instructions' component={AssessmentInstructions} />
         </Stack.Navigator>

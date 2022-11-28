@@ -1,45 +1,34 @@
 import React from "react";
-import {
-  Box,
-  HStack,
-  Icon,
-  Text,
-  Image,
-  Center,
-  Heading,
-  VStack,
-  Divider,
-  Flex,
-  ScrollView,
-  Pressable,
-} from "native-base";
-import { Video, AVPlaybackStatus } from "expo-av";
+import { Box, Heading, VStack, Flex, Pressable } from "native-base";
+import { Video } from "expo-av";
 import { StyleSheet } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { useSnapshot } from "valtio";
+import { AssessmentExercises, currentExercise } from "../constants/states";
 
-const ExcPreview = () => {
+export default function ExcPreview() {
   const video = React.useRef(null);
-
   const [status, setStatus] = React.useState({});
+
+  const Excs = useSnapshot(AssessmentExercises);
+  const excCounter = useSnapshot(currentExercise);
 
   const navigation = useNavigation();
 
   const pressHandler: any = () => {
     navigation.navigate("Instructions", { names: "jes" });
-
-    console.log("hi");
   };
+
   return (
-    <Flex safeAreaTop direction='column'>
-      <VStack justifyContent='center' alignItems='center'>
+    <Box safeAreaTop flex={1}>
+      <Box justifyContent='center' alignItems='center'>
         <VStack justifyContent='center' alignItems='center' space='1'>
-          <Heading size='xs'> {"Assessment #1"}</Heading>
+          <Heading size='xs'> Assessment # {Excs[excCounter.currentExerciseNum].Exc_id}</Heading>
           <Heading pt='2' size='lg'>
-            {"Sit to Stand"}
+            {Excs[excCounter.currentExerciseNum].Exc_name}
           </Heading>
-          <Heading size='xs'> {'~30" '}</Heading>
+          <Heading size='xs'> {Excs[excCounter.currentExerciseNum].Exc_overview} </Heading>
           <Box style={styles.container} w='full'>
             <Video
               ref={video}
@@ -63,15 +52,16 @@ const ExcPreview = () => {
 
           {/* <Image source={require("../assets/test1.png")} alt='Alternative Text'></Image> */}
         </VStack>
-      </VStack>
-    </Flex>
+      </Box>
+    </Box>
   );
-};
+}
+
 const styles = StyleSheet.create({
   video: {
     alignSelf: "center",
     height: "100%",
-    width: 400,
+    width: 420,
     resizeMode: "stretch",
   },
   container: {
@@ -83,4 +73,3 @@ const styles = StyleSheet.create({
     padding: 0,
   },
 });
-export default ExcPreview;

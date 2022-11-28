@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Flex, Heading, Icon, Pressable, Text } from "native-base";
+import { Box, Button, Center, Flex, Heading, Icon, Pressable, Text, View } from "native-base";
 import { StyleSheet } from "react-native";
 import { Feather, MaterialCommunityIcons, MaterialIcons, Ionicons } from "@expo/vector-icons";
 
@@ -7,29 +7,35 @@ import ExcPreview from "../components/ExcPreview";
 import StartExc from "../components/StartExc";
 import { Video } from "expo-av";
 import { useNavigation } from "@react-navigation/native";
+import { useSnapshot } from "valtio";
+import { AssessmentExercises, currentExercise } from "../constants/states";
 
-const userName: string = "Betty";
 export default function AssessmentPlay() {
   const video = React.useRef(null);
 
   const [status, setStatus] = React.useState({});
+  const [position, setPosition] = React.useState({});
+
   const navigation = useNavigation();
 
   const pressHandlerNext: any = () => {
-    navigation.navigate();
-
-    console.log("go to next exercise");
+    navigation.push("Detail");
+    ++currentExercise.currentExerciseNum;
+    console.log(currentExercise.currentExerciseNum);
   };
+  const Excs = useSnapshot(AssessmentExercises);
+  const excCounter = useSnapshot(currentExercise);
 
-  const videoPressHandler = () => {
-    console.log("pressed");
-  };
-
+  function millisToMinutesAndSeconds(millis: number): string {
+    var minutes = Math.floor(millis / 60000);
+    let seconds = ((millis % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  }
   return (
     <Box safeAreaTop flex={1}>
-      <Box flex={6} p='2' m='2'>
+      <Box flex={6} pt='2' mt='2'>
         <Center my={2}>
-          <Heading size='xs'> {"Assessment #1"}</Heading>
+          <Heading size='xs'> Assessment # {Excs[excCounter.currentExerciseNum].Exc_id}</Heading>
         </Center>
 
         <Box style={styles.container} w='full'>
@@ -43,8 +49,14 @@ export default function AssessmentPlay() {
             onPlaybackStatusUpdate={(status) => setStatus(() => status)}
           />
         </Box>
+        {status.isPlaying && (
+          <Center w='full' bgColor='blueGray.300'>
+            <Text fontSize='md' bold>
+              {millisToMinutesAndSeconds(status.positionMillis)}
+            </Text>
+          </Center>
+        )}
       </Box>
-
       <Box
         bgColor='red.100'
         flex={1}
@@ -52,7 +64,8 @@ export default function AssessmentPlay() {
         justifyContent='space-around'
         alignContent='center'
         alignItems='center'>
-        <Pressable></Pressable>
+        <Box></Box>
+
         <Flex align='center' justify='center' py='1'>
           <Pressable
             display='flex'
@@ -72,12 +85,13 @@ export default function AssessmentPlay() {
                   py='4'
                   rounded='50'
                   shadow={1}>
-                  <Text bold>Start</Text>
+                  <Text bold>{status.isPlaying ? "PAUSE" : "PLAY"}</Text>
                 </Flex>
               );
             }}
           </Pressable>
         </Flex>
+        {/* Next */}
         <Pressable onPress={pressHandlerNext}>
           <Icon as={Ionicons} name='chevron-forward-sharp' size={8} />
         </Pressable>
@@ -90,7 +104,7 @@ const styles = StyleSheet.create({
   video: {
     alignSelf: "center",
     height: "100%",
-    width: 400,
+    width: "100%",
     resizeMode: "stretch",
   },
   container: {

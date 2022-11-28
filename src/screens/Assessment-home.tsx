@@ -2,39 +2,40 @@ import React from "react";
 import { Text, Heading, Box, View, IButtonProps, Button } from "native-base";
 import { proxy, useSnapshot } from "valtio";
 import Exercise from "../components/Exercise";
-import Footer from "../components/Footer";
+
 import Start from "../components/Start";
 
-import { AssessmentExercises, User } from "../constants/states";
+import { AssessmentExercises, currentExercise, User } from "../constants/states";
+import { useNavigation } from "@react-navigation/native";
 
-export default function Assessment({ navigation }) {
+export default function Assessment() {
   const Excs = useSnapshot(AssessmentExercises);
   const U: any = useSnapshot(User);
+
+  const navigation = useNavigation();
+
   const pressHandler = () => {
-    navigation.navigate("Detail");
+    navigation.push("Detail");
   };
 
   return (
-    <Box safeAreaTop flex={1}>
-      <Box flex={1} p='1' m='1'>
-        <Box flex={1}>
-          <Box alignItems='center' flexGrow={1}>
-            <Heading>Good Morning {U.User_FName} !</Heading>
-            <Text color='teal.500'>Let’s start with some simple assessments</Text>
-            <Box display='flex' flexDirection='row-reverse'></Box>
-          </Box>
-          <Box borderBottomWidth='1' justifyContent='space-between' borderColor='teal.100' py='1' flexGrow={4}>
-            {Excs.map((item) => (
-              <Exercise key={item.Exc_id} exercise={item} />
-            ))}
-          </Box>
-          <Box flexGrow={1}>
-            <Start />
-          </Box>
-        </Box>
+    <Box safeAreaTop flex={1} m='2' p='2'>
+      <Box alignItems='center' flexGrow={1} mt='10'>
+        <Heading size='xl' color='trueGray.500'>
+          Good Morning {U.User_FName} !
+        </Heading>
+        <Heading size='md' color='muted.500' pt='4'>
+          Let’s start with some assessments
+        </Heading>
       </Box>
-      <Box p='0' m='0'>
-        <Footer />
+      {/* rendering the exercises */}
+      <Box justifyContent='space-around' py='1' flexGrow={4}>
+        {Excs.map((item) => (
+          <Exercise key={item.Exc_id} exercise={item} />
+        ))}
+      </Box>
+      <Box flexGrow={1}>
+        <Start />
       </Box>
     </Box>
   );

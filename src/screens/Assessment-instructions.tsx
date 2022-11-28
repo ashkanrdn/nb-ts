@@ -18,10 +18,13 @@ import { Feather, MaterialCommunityIcons, MaterialIcons, Ionicons } from "@expo/
 import ExcPreview from "../components/ExcPreview";
 import Play from "../components/Play";
 import { useNavigation } from "@react-navigation/native";
+import { useSnapshot } from "valtio";
+import { AssessmentExercises, currentExercise } from "../constants/states";
 
 export default function AssessmentInstructions() {
   const navigation = useNavigation();
-
+  const Excs = useSnapshot(AssessmentExercises);
+  const excCounter = useSnapshot(currentExercise);
   const pressHandler: any = () => {
     navigation.goBack();
 
@@ -39,9 +42,9 @@ export default function AssessmentInstructions() {
           </Box>
 
           <VStack justifyContent='center' alignItems='center' space='1'>
-            <Heading size='xs'> {"Assessment #1"}</Heading>
+            <Heading size='xs'> Assessment # {excCounter.currentExerciseNum} </Heading>
             <Heading pt='2' size='lg'>
-              {"Sit to Stand"}
+              {Excs[excCounter.currentExerciseNum].Exc_name}
             </Heading>
           </VStack>
 
@@ -74,33 +77,21 @@ export default function AssessmentInstructions() {
                       color: "warmGray.50",
                     }}
                   />
-                  <Text>Chair</Text>
+                  <Text> {Excs[excCounter.currentExerciseNum].Exc_equipment.equipment_1?.name}</Text>
                 </Center>
               </Box>
 
               <Box w='50%' height='20' justifyContent='space-around' alignItems='center' alignContent='center'>
                 <Center>
                   <Text>Time</Text>
-                  <Text> 5</Text>
-                  <Text>Minutes</Text>
+                  <Text> {Excs[excCounter.currentExerciseNum].Exc_overview} </Text>
                 </Center>
               </Box>
             </HStack>
           </Box>
           <Box maxH='50%' py='1'>
             <ScrollView>
-              <Text>
-                Sit near the front edge of a chair. Arms on the chest, lean forward at your waist as you press down with
-                your legs, and rise to a standing position. As you rise to stand, lyour legs, and rise to a standing
-                position. As you rise to stand, lyour legs, and rise to a standing position. As you rise to stand, lyour
-                legs, and rise to a standing position. As you rise to stand, lyour legs, and rise to a standing
-                position. As you rise to stand, lyour legs, and rise to a standing position. As you rise to stand, lyour
-                legs, and rise to a standing position. As you rise to stand, lyour legs, and rise to a standing
-                position. As you rise to stand, lyour legs, and rise to a standing position. As you rise to stand, lyour
-                legs, and rise to a standing position. As you rise to stand, lyour legs, and rise to a standing
-                position. As you rise to stand, lyour legs, and rise to a standing position. As you rise to stand, lyour
-                legs, and rise to a
-              </Text>
+              <Text>{Excs[excCounter.currentExerciseNum].Exc_Description}</Text>
             </ScrollView>
           </Box>
         </Box>
