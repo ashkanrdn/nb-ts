@@ -33,7 +33,8 @@ export default function ExcPreview() {
             <Video
               ref={video}
               style={styles.video}
-              source={require("../assets/Assessment1.mov")}
+              // source={require("../assets/Assessment1.mov")}
+              source={{ uri: Excs[excCounter.currentExerciseNum].Exc_Video }}
               useNativeControls
               resizeMode='cover'
               isLooping

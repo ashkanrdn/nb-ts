@@ -10,7 +10,7 @@ var _ = require("lodash");
 const Exercise = (props: any) => {
   var exerciseInfo = _.toPlainObject(props.exercise);
   var tep = exerciseInfo.Exc_Icon;
-  // var pathtemp = require(tep);
+
   return (
     <Flex direction='row' alignItems='center' alignContent='center'>
       <Box p='2' ml='3'>
