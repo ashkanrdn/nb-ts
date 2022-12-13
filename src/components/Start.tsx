@@ -4,12 +4,16 @@ import { Box, Text, Center, Pressable } from "native-base";
 import { Feather, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useSnapshot } from "valtio";
+import _ from "lodash";
 const excerName: string = "Hi";
 
-function Start() {
+function Start(props: any) {
   const navigation = useNavigation();
+
+  console.log(props.pageName);
+
   const pressHandler: any = () => {
-    navigation.navigate("Detail", { names: "jes" });
+    navigation.navigate(props.pageName);
   };
   return (
     <Center mt='1'>

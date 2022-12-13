@@ -33,7 +33,12 @@ export default function Residents() {
         </ScrollView>
       </Box>
       <Box flex={1}>
-        <Text>Add User</Text>
+        <Button
+          onPress={() => {
+            navigation.navigate("AddUser");
+          }}>
+          Add User
+        </Button>
       </Box>
     </Box>
   );

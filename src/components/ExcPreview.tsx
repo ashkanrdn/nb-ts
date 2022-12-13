@@ -25,7 +25,7 @@ export default function ExcPreview() {
   var residentInfo = _.toPlainObject(allResidentSnap[currentResidentSnap.currentUser_id]);
 
   const pressHandler: any = () => {
-    navigation.navigate("Instructions", { names: "jes" });
+    navigation.navigate("Instructions");
   };
 
   return (

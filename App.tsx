@@ -10,6 +10,7 @@ import AssessmentInstructions from "./src/screens/Assessment-instructions";
 import AssessmentPlay from "./src/screens/Assessment-Play";
 import AppContainer from "./src/Routes/homeStack";
 import Residents from "./src/screens/Residents";
+import AddUser from "./src/screens/AddUser";
 
 // Define the config
 const config = {
@@ -32,8 +33,9 @@ export default function App() {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name='Residents' component={Residents} />
           <Stack.Screen name='Home' component={Assessment} />
+          <Stack.Screen name='Residents' component={Residents} />
+          <Stack.Screen name='AddUser' component={AddUser} />
           <Stack.Screen name='Play' component={AssessmentPlay} />
           <Stack.Screen name='Detail' component={AssessmentDetail} />
           <Stack.Screen name='Instructions' component={AssessmentInstructions} />

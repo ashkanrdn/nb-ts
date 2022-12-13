@@ -21,16 +21,15 @@ export default function Assess(props: any) {
       {({ isPressed }) => {
         return (
           <Box
-            borderWidth='1'
+            borderWidth='2'
             // borderColor={isPressed ? "cyan.`200`" : "cyan.300"}
             borderColor={"cyan.200"}
             style={{ transform: [{ scale: isPressed ? 0.98 : 1 }] }}
             px='2'
             py='2'
-            rounded='8'
-            shadow={1}>
+            rounded='8'>
             <Center>
-              <Text bold color='coolGray.800' fontSize='md'>
+              <Text bold color='cyan.400' fontSize='md'>
                 Assess
               </Text>
             </Center>

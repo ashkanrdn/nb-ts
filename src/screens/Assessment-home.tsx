@@ -5,12 +5,12 @@ import Exercise from "../components/Exercise";
 
 import Start from "../components/Start";
 
-import { AssessmentExercises, currentExercise, User } from "../constants/states";
+import { AssessmentExercises, currentExercise, Users } from "../constants/states";
 import { useNavigation } from "@react-navigation/native";
 
 export default function Assessment() {
   const Excs = useSnapshot(AssessmentExercises);
-  const U: any = useSnapshot(User);
+  const U: any = useSnapshot(Users);
 
   const navigation = useNavigation();
 
@@ -22,7 +22,7 @@ export default function Assessment() {
     <Box safeAreaTop flex={1} m='2' p='2'>
       <Box alignItems='center' flexGrow={1} mt='10'>
         <Heading size='xl' color='trueGray.500'>
-          Good Morning {U.User_FName} !
+          Good Morning!
         </Heading>
         <Heading size='md' color='muted.500' pt='4'>
           Let’s start with some assessments
@@ -35,7 +35,7 @@ export default function Assessment() {
         ))}
       </Box>
       <Box flexGrow={1}>
-        <Start />
+        <Start pageName='Residents' />
       </Box>
     </Box>
   );
