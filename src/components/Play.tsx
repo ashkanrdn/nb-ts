@@ -5,16 +5,10 @@ import { Feather, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-ico
 import { useNavigation } from "@react-navigation/native";
 const excerName: string = "Hi";
 
-let show = function () {
-  console.log("Anonymous function");
-};
-
 function Play() {
   const navigation = useNavigation();
   const pressHandler: any = () => {
-    navigation.navigate("Play", { names: "jes" });
-
-    console.log("go to play");
+    navigation.navigate("Play");
   };
   return (
     <Flex align='center' justify='center' py='1'>
@@ -32,7 +26,7 @@ function Play() {
               py='4'
               rounded='50'
               shadow={1}>
-              <Text bold>PLAY</Text>
+              <Text bold>START</Text>
             </Flex>
           );
         }}

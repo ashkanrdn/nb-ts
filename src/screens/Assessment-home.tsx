@@ -15,7 +15,7 @@ export default function Assessment() {
   const navigation = useNavigation();
 
   const pressHandler = () => {
-    navigation.push("Detail");
+    navigation.push("Residents");
   };
 
   return (

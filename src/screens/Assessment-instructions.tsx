@@ -27,8 +27,6 @@ export default function AssessmentInstructions() {
   const excCounter = useSnapshot(currentExercise);
   const pressHandler: any = () => {
     navigation.goBack();
-
-    console.log("yo");
   };
 
   return (

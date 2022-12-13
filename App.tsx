@@ -9,8 +9,7 @@ import AssessmentDetail from "./src/screens/Assessment-detail";
 import AssessmentInstructions from "./src/screens/Assessment-instructions";
 import AssessmentPlay from "./src/screens/Assessment-Play";
 import AppContainer from "./src/Routes/homeStack";
-
-const RootStack = createNativeStackNavigator();
+import Residents from "./src/screens/Residents";
 
 // Define the config
 const config = {
@@ -33,6 +32,7 @@ export default function App() {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name='Residents' component={Residents} />
           <Stack.Screen name='Home' component={Assessment} />
           <Stack.Screen name='Play' component={AssessmentPlay} />
           <Stack.Screen name='Detail' component={AssessmentDetail} />

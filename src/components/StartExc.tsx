@@ -6,16 +6,10 @@ import { useNavigation } from "@react-navigation/native";
 import { GestureResponderEvent } from "react-native";
 const excerName: string = "Hi";
 
-let show = function () {
-  console.log("Anonymous function");
-};
-
 function Play(onPress: { videoPressHandler: ((event: GestureResponderEvent) => void) | null | undefined }) {
   const navigation = useNavigation();
   const pressHandler: any = () => {
     navigation.navigate("Play", { names: "jes" });
-
-    console.log("go to play");
   };
   return (
     <Flex align='center' justify='center' py='1'>

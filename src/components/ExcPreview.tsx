@@ -1,11 +1,14 @@
 import React from "react";
-import { Box, Heading, VStack, Flex, Pressable } from "native-base";
+import { Box, Heading, VStack, Flex, Pressable, Button } from "native-base";
 import { Video } from "expo-av";
 import { StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useSnapshot } from "valtio";
 import { AssessmentExercises, currentExercise } from "../constants/states";
+import { currentResident } from "../constants/states";
+import { Users } from "../constants/states";
+var _ = require("lodash");
 
 export default function ExcPreview() {
   const video = React.useRef(null);
@@ -16,6 +19,11 @@ export default function ExcPreview() {
 
   const navigation = useNavigation();
 
+  const currentResidentSnap = useSnapshot(currentResident);
+  const allResidentSnap = useSnapshot(Users);
+
+  var residentInfo = _.toPlainObject(allResidentSnap[currentResidentSnap.currentUser_id]);
+
   const pressHandler: any = () => {
     navigation.navigate("Instructions", { names: "jes" });
   };
@@ -24,6 +32,10 @@ export default function ExcPreview() {
     <Box safeAreaTop flex={1}>
       <Box justifyContent='center' alignItems='center'>
         <VStack justifyContent='center' alignItems='center' space='1'>
+          <Button onPress={navigation.goBack}></Button>
+          <Heading>
+            {residentInfo.User_info.User_FName} {residentInfo.User_info.User_LName}
+          </Heading>
           <Heading size='xs'> Assessment # {Excs[excCounter.currentExerciseNum].Exc_id}</Heading>
           <Heading pt='2' size='lg'>
             {Excs[excCounter.currentExerciseNum].Exc_name}

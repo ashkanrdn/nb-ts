@@ -21,7 +21,6 @@ export default function AssessmentPlay() {
   const pressHandlerNext: any = () => {
     navigation.push("Detail");
     ++currentExercise.currentExerciseNum;
-    console.log(currentExercise.currentExerciseNum);
   };
   const Excs = useSnapshot(AssessmentExercises);
   const excCounter = useSnapshot(currentExercise);
@@ -86,7 +85,7 @@ export default function AssessmentPlay() {
                   py='4'
                   rounded='50'
                   shadow={1}>
-                  <Text bold>{status.isPlaying ? "PAUSE" : "PLAY"}</Text>
+                  <Text bold>{status.isPlaying ? "PAUSE" : "START"}</Text>
                 </Flex>
               );
             }}

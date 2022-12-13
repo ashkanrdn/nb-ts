@@ -6,16 +6,10 @@ import { useNavigation } from "@react-navigation/native";
 import { useSnapshot } from "valtio";
 const excerName: string = "Hi";
 
-let show = function () {
-  console.log("Anonymous function");
-};
-
 function Start() {
   const navigation = useNavigation();
   const pressHandler: any = () => {
     navigation.navigate("Detail", { names: "jes" });
-
-    console.log("yo");
   };
   return (
     <Center mt='1'>
