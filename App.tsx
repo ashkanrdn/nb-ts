@@ -12,6 +12,26 @@ import AppContainer from "./src/Routes/homeStack";
 import Residents from "./src/screens/Residents";
 import AddUser from "./src/screens/AddUser";
 
+import { ConfigurationOptions } from "aws-sdk";
+import * as AWS from "aws-sdk";
+import dynamodb from "aws-sdk/clients/dynamodb";
+
+// const configuration: ConfigurationOptions = {
+//   region: "us-east-1",
+//   secretAccessKey: "Vay5NEOudAuqXtQwvb7ZBJXtPgmSds5QSXcoPovL",
+//   accessKeyId: "AKIAWRW334WTYKPNJLQC",
+// };
+
+// AWS.config.update(configuration);
+
+// dynamodb
+//   .scan({
+//     TableName: "Smart_Health_Table",
+//   })
+//   .promise()
+//   .then((data: { Items: any }) => console.log(data.Items))
+//   .catch(console.error);
+
 // Define the config
 const config = {
   useSystemColorMode: false,
@@ -43,10 +63,4 @@ export default function App() {
       </NavigationContainer>
     </NativeBaseProvider>
   );
-}
-{
-  /* <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name='Home' component={Assessment} />
-          <Stack.Screen name='Detail' component={AssessmentDetail} />
-        </Stack.Navigator> */
 }
