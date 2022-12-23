@@ -27,12 +27,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		361749EFC87CABBB457D4DE8 /* FSC_FrameProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C575B94FA9D71620C000D5F /* FSC_FrameProcessor.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-nbts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-nbts.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		F92EF0AAB2C02B543258B4A0 /* FSC_FrameProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4216B2F267AD1C11619A85B0 /* FSC_FrameProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,11 +58,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nbts/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = nbts/main.m; sourceTree = "<group>"; };
 		1CF178BD0109D904F1D2B2C2 /* nbts-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nbts-Bridging-Header.h"; sourceTree = "<group>"; };
-		4216B2F267AD1C11619A85B0 /* FSC_FrameProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSC_FrameProcessor.m; path = FSC_FrameProcessor/FSC_FrameProcessor.m; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-nbts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nbts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-nbts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nbts.debug.xcconfig"; path = "Target Support Files/Pods-nbts/Pods-nbts.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-nbts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nbts.release.xcconfig"; path = "Target Support Files/Pods-nbts/Pods-nbts.release.xcconfig"; sourceTree = "<group>"; };
-		8C575B94FA9D71620C000D5F /* FSC_FrameProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSC_FrameProcessor.swift; path = FSC_FrameProcessor/FSC_FrameProcessor.swift; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = nbts/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -172,7 +168,6 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				91C1E40381E8C372DB190EE0 /* FSC_FrameProcessor */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -185,15 +180,6 @@
 				13B07F961A680F5B00A75B9A /* nbts.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		91C1E40381E8C372DB190EE0 /* FSC_FrameProcessor */ = {
-			isa = PBXGroup;
-			children = (
-				4216B2F267AD1C11619A85B0 /* FSC_FrameProcessor.m */,
-				8C575B94FA9D71620C000D5F /* FSC_FrameProcessor.swift */,
-			);
-			name = FSC_FrameProcessor;
 			sourceTree = "<group>";
 		};
 		92DBD88DE9BF7D494EA9DA96 /* nbts */ = {
@@ -417,8 +403,6 @@
 				059E728629563B7500C516FF /* ArrayExtension.swift in Sources */,
 				059E728929563B7500C516FF /* Interfaces.swift in Sources */,
 				059E728B29563B7500C516FF /* UIIMageExtension.swift in Sources */,
-				F92EF0AAB2C02B543258B4A0 /* FSC_FrameProcessor.m in Sources */,
-				361749EFC87CABBB457D4DE8 /* FSC_FrameProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
