@@ -29,11 +29,11 @@ export default function Assessment() {
         </Heading>
       </Box>
       {/* rendering the exercises */}
-      {/* <Box justifyContent='space-around' py='1' flexGrow={4}>
+      <Box justifyContent='space-around' py='1' flexGrow={4}>
         {Excs.map((item) => (
           <Exercise key={item.Exc_id} exercise={item} />
         ))}
-      </Box> */}
+      </Box>
       <Box flexGrow={1}>
         <Start pageName='Residents' />
       </Box>
