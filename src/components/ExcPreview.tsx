@@ -1,16 +1,38 @@
 import React from "react";
-import { Box, Heading, VStack, Flex, Pressable, Button } from "native-base";
+import { Box, Heading, VStack, Flex, Pressable, Button, View } from "native-base";
 import { Video } from "expo-av";
-import { StyleSheet } from "react-native";
+import { StyleSheet, ActivityIndicator } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { useSnapshot } from "valtio";
+import { useCameraDevices, Camera } from 'react-native-vision-camera';
+import {useSharedValue} from 'react-native-reanimated'
+import {useState, useEffect} from 'react'
+
 import { AssessmentExercises, currentExercise } from "../constants/states";
 import { currentResident } from "../constants/states";
 import { Users } from "../constants/states";
+
+import Graphs from "./Graph";
+
+import {IFSC_Data, IBoundingBox} from '../utilities/interfaces'
+import { initFSC_Data, initBox} from '../utilities/interfaces'
+import {useFSC_FrameProcessor} from '../utilities/libraries'
+import {__FSC_CONSTANT__, ESystem_AI_Mode} from '../utilities/Const'
+
+
+
 var _ = require("lodash");
 
 export default function ExcPreview() {
+
+
+  const [hasPermission, setHasPermission] = useState(false);
+  const devices = useCameraDevices()
+  const device = devices.front
+  const currentFSC_data = useSharedValue<IFSC_Data>(initFSC_Data);
+  const currentSystemMode = useSharedValue<ESystem_AI_Mode>(__FSC_CONSTANT__.mode);
+
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
 
@@ -28,6 +50,28 @@ export default function ExcPreview() {
     navigation.navigate("Instructions");
   };
 
+
+  useEffect(() => {
+    (async () => {
+      const status = await Camera.requestCameraPermission()
+      setHasPermission(status === 'authorized')
+    })()
+  }, [])
+
+  const frameProcessor = useFSC_FrameProcessor(currentFSC_data, currentSystemMode)
+
+  console.log(`Re-rendering Navigator. Camera: ${device}`);
+  if (hasPermission == null) {
+    // still loading
+    return null;
+  }
+
+  if (device == null) {
+    return <ActivityIndicator size={20} color={'red'} />;
+  }
+
+
+
   return (
     <Box safeAreaTop flex={1}>
       <Box justifyContent='center' alignItems='center'>
@@ -42,16 +86,23 @@ export default function ExcPreview() {
           </Heading>
           <Heading size='xs'> {Excs[excCounter.currentExerciseNum].Exc_overview} </Heading>
           <Box style={styles.container} w='full'>
-            <Video
-              ref={video}
-              style={styles.video}
-              // source={require("../assets/Assessment1.mov")}
-              source={{ uri: Excs[excCounter.currentExerciseNum].Exc_Video }}
-              useNativeControls
-              resizeMode='cover'
-              isLooping
-              onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+              <Camera
+              style={[StyleSheet.absoluteFill, styles.camera]}
+              device={device}
+              isActive={true}
+              enableZoomGesture={false}
+              photo={false}
+              video={false}
+              frameProcessor={frameProcessor}
+              orientation="portrait"
+              frameProcessorFps={__FSC_CONSTANT__.fps}
+              preset={__FSC_CONSTANT__.camera_preset}
+              //onFrameProcessorPerformanceSuggestionAvailable={onFrameProcessorSuggestionAvailable}
             />
+            <View style={styles.graph}>	
+              <Graphs currentFSC_data={currentFSC_data} />
+            </View>
+
           </Box>
 
           <Box py='2' display='flex' flexDirection='row'>
@@ -71,6 +122,18 @@ export default function ExcPreview() {
 }
 
 const styles = StyleSheet.create({
+  graph:{
+    position: 'absolute',
+    marginLeft: 0,
+    marginTop: 400,
+    width: 400,
+    height: 400,
+    opacity:0.5,
+    zIndex:1
+  },
+  camera:{
+    backgroundColor: 'rgba(0,0,0,0.7)'
+  },
   video: {
     alignSelf: "center",
     height: "100%",

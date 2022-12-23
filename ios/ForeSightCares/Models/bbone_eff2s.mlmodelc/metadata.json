@@ -1,0 +1,68 @@
+[
+  {
+    "shortDescription" : "Backbone of 3D skeleton.",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "--",
+        "shape" : "[]",
+        "name" : "Identity",
+        "type" : "MultiArray"
+      }
+    ],
+    "version" : "--",
+    "modelParameters" : [
+
+    ],
+    "author" : "metrabs",
+    "specificationVersion" : 6,
+    "storagePrecision" : "Float16",
+    "license" : "--",
+    "mlProgramOperationTypeHistogram" : {
+      "Cast" : 2,
+      "Conv" : 170,
+      "Pad" : 41,
+      "Sigmoid" : 30,
+      "Add" : 35,
+      "Mul" : 31,
+      "Silu" : 102,
+      "Transpose" : 1,
+      "ReduceMean" : 30
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Int32)",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "12.0",
+      "tvOS" : "15.0",
+      "watchOS" : "8.0",
+      "iOS" : "15.0",
+      "macCatalyst" : "15.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "height" : "256",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "256",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 256 × 256)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "--",
+        "name" : "image"
+      }
+    ],
+    "userDefinedMetadata" : {
+
+    },
+    "generatedClassName" : "bbone_eff2s",
+    "method" : "predict"
+  }
+]

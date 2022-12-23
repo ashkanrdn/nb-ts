@@ -7,26 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		059E727A29563B7500C516FF /* fsc_frame_processor.m in Sources */ = {isa = PBXBuildFile; fileRef = 059E726629563B7500C516FF /* fsc_frame_processor.m */; };
+		059E727B29563B7500C516FF /* fsc_frame_processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E726729563B7500C516FF /* fsc_frame_processor.swift */; };
+		059E727C29563B7500C516FF /* PoseEsitmator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E726929563B7500C516FF /* PoseEsitmator.swift */; };
+		059E727D29563B7500C516FF /* yolov5s.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 059E726A29563B7500C516FF /* yolov5s.mlmodelc */; };
+		059E727E29563B7500C516FF /* bbone_eff2s.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 059E726B29563B7500C516FF /* bbone_eff2s.mlpackage */; };
+		059E728029563B7500C516FF /* yolov5s.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E726D29563B7500C516FF /* yolov5s.swift */; };
+		059E728229563B7500C516FF /* eff2s_head_with_post_process.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 059E726F29563B7500C516FF /* eff2s_head_with_post_process.tflite */; };
+		059E728329563B7500C516FF /* Libraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727129563B7500C516FF /* Libraries.swift */; };
+		059E728429563B7500C516FF /* CMSampleBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727229563B7500C516FF /* CMSampleBufferExtension.swift */; };
+		059E728529563B7500C516FF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727329563B7500C516FF /* Logger.swift */; };
+		059E728629563B7500C516FF /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727429563B7500C516FF /* ArrayExtension.swift */; };
+		059E728729563B7500C516FF /* DetectSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727529563B7500C516FF /* DetectSkeleton.swift */; };
+		059E728829563B7500C516FF /* DebugLibraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727629563B7500C516FF /* DebugLibraries.swift */; };
+		059E728929563B7500C516FF /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727729563B7500C516FF /* Interfaces.swift */; };
+		059E728A29563B7500C516FF /* TFLiteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727829563B7500C516FF /* TFLiteExtension.swift */; };
+		059E728B29563B7500C516FF /* UIIMageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059E727929563B7500C516FF /* UIIMageExtension.swift */; };
+		0D73A8F0B5527F82744E70D1 /* nbts-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CF178BD0109D904F1D2B2C2 /* nbts-Bridging-Header.h */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		361749EFC87CABBB457D4DE8 /* FSC_FrameProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C575B94FA9D71620C000D5F /* FSC_FrameProcessor.swift */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-nbts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-nbts.a */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		F92EF0AAB2C02B543258B4A0 /* FSC_FrameProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4216B2F267AD1C11619A85B0 /* FSC_FrameProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		059E726629563B7500C516FF /* fsc_frame_processor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fsc_frame_processor.m; sourceTree = "<group>"; };
+		059E726729563B7500C516FF /* fsc_frame_processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fsc_frame_processor.swift; sourceTree = "<group>"; };
+		059E726929563B7500C516FF /* PoseEsitmator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoseEsitmator.swift; sourceTree = "<group>"; };
+		059E726A29563B7500C516FF /* yolov5s.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = yolov5s.mlmodelc; sourceTree = "<group>"; };
+		059E726B29563B7500C516FF /* bbone_eff2s.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = bbone_eff2s.mlpackage; sourceTree = "<group>"; };
+		059E726D29563B7500C516FF /* yolov5s.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yolov5s.swift; sourceTree = "<group>"; };
+		059E726F29563B7500C516FF /* eff2s_head_with_post_process.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = eff2s_head_with_post_process.tflite; sourceTree = "<group>"; };
+		059E727129563B7500C516FF /* Libraries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libraries.swift; sourceTree = "<group>"; };
+		059E727229563B7500C516FF /* CMSampleBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSampleBufferExtension.swift; sourceTree = "<group>"; };
+		059E727329563B7500C516FF /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		059E727429563B7500C516FF /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		059E727529563B7500C516FF /* DetectSkeleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectSkeleton.swift; sourceTree = "<group>"; };
+		059E727629563B7500C516FF /* DebugLibraries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLibraries.swift; sourceTree = "<group>"; };
+		059E727729563B7500C516FF /* Interfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		059E727829563B7500C516FF /* TFLiteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFLiteExtension.swift; sourceTree = "<group>"; };
+		059E727929563B7500C516FF /* UIIMageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIIMageExtension.swift; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* nbts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nbts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = nbts/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = nbts/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nbts/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nbts/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = nbts/main.m; sourceTree = "<group>"; };
+		1CF178BD0109D904F1D2B2C2 /* nbts-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nbts-Bridging-Header.h"; sourceTree = "<group>"; };
+		4216B2F267AD1C11619A85B0 /* FSC_FrameProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSC_FrameProcessor.m; path = FSC_FrameProcessor/FSC_FrameProcessor.m; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-nbts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nbts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-nbts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nbts.debug.xcconfig"; path = "Target Support Files/Pods-nbts/Pods-nbts.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-nbts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nbts.release.xcconfig"; path = "Target Support Files/Pods-nbts/Pods-nbts.release.xcconfig"; sourceTree = "<group>"; };
+		8C575B94FA9D71620C000D5F /* FSC_FrameProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSC_FrameProcessor.swift; path = FSC_FrameProcessor/FSC_FrameProcessor.swift; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = nbts/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -45,9 +83,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		059E726429563B7500C516FF /* ForeSightCares */ = {
+			isa = PBXGroup;
+			children = (
+				059E726529563B7500C516FF /* FSC_Frame_Processor */,
+				059E726829563B7500C516FF /* Models */,
+				059E727029563B7500C516FF /* src */,
+			);
+			path = ForeSightCares;
+			sourceTree = "<group>";
+		};
+		059E726529563B7500C516FF /* FSC_Frame_Processor */ = {
+			isa = PBXGroup;
+			children = (
+				059E726629563B7500C516FF /* fsc_frame_processor.m */,
+				059E726729563B7500C516FF /* fsc_frame_processor.swift */,
+			);
+			path = FSC_Frame_Processor;
+			sourceTree = "<group>";
+		};
+		059E726829563B7500C516FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				059E726929563B7500C516FF /* PoseEsitmator.swift */,
+				059E726A29563B7500C516FF /* yolov5s.mlmodelc */,
+				059E726B29563B7500C516FF /* bbone_eff2s.mlpackage */,
+				059E726D29563B7500C516FF /* yolov5s.swift */,
+				059E726F29563B7500C516FF /* eff2s_head_with_post_process.tflite */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		059E727029563B7500C516FF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				059E727129563B7500C516FF /* Libraries.swift */,
+				059E727229563B7500C516FF /* CMSampleBufferExtension.swift */,
+				059E727329563B7500C516FF /* Logger.swift */,
+				059E727429563B7500C516FF /* ArrayExtension.swift */,
+				059E727529563B7500C516FF /* DetectSkeleton.swift */,
+				059E727629563B7500C516FF /* DebugLibraries.swift */,
+				059E727729563B7500C516FF /* Interfaces.swift */,
+				059E727829563B7500C516FF /* TFLiteExtension.swift */,
+				059E727929563B7500C516FF /* UIIMageExtension.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* nbts */ = {
 			isa = PBXGroup;
 			children = (
+				059E726429563B7500C516FF /* ForeSightCares */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -56,6 +142,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
+				1CF178BD0109D904F1D2B2C2 /* nbts-Bridging-Header.h */,
 			);
 			name = nbts;
 			sourceTree = "<group>";
@@ -85,6 +172,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
+				91C1E40381E8C372DB190EE0 /* FSC_FrameProcessor */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -97,6 +185,15 @@
 				13B07F961A680F5B00A75B9A /* nbts.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		91C1E40381E8C372DB190EE0 /* FSC_FrameProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				4216B2F267AD1C11619A85B0 /* FSC_FrameProcessor.m */,
+				8C575B94FA9D71620C000D5F /* FSC_FrameProcessor.swift */,
+			);
+			name = FSC_FrameProcessor;
 			sourceTree = "<group>";
 		};
 		92DBD88DE9BF7D494EA9DA96 /* nbts */ = {
@@ -135,6 +232,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		7EBEED7956C9C06BE63FCE78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D73A8F0B5527F82744E70D1 /* nbts-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		13B07F861A680F5B00A75B9A /* nbts */ = {
 			isa = PBXNativeTarget;
@@ -147,6 +255,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
+				7EBEED7956C9C06BE63FCE78 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -194,6 +303,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				059E728229563B7500C516FF /* eff2s_head_with_post_process.tflite in Resources */,
+				059E727D29563B7500C516FF /* yolov5s.mlmodelc in Resources */,
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
@@ -290,8 +401,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				059E728029563B7500C516FF /* yolov5s.swift in Sources */,
+				059E728429563B7500C516FF /* CMSampleBufferExtension.swift in Sources */,
+				059E727A29563B7500C516FF /* fsc_frame_processor.m in Sources */,
+				059E727E29563B7500C516FF /* bbone_eff2s.mlpackage in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				059E728829563B7500C516FF /* DebugLibraries.swift in Sources */,
+				059E728A29563B7500C516FF /* TFLiteExtension.swift in Sources */,
+				059E728529563B7500C516FF /* Logger.swift in Sources */,
+				059E727B29563B7500C516FF /* fsc_frame_processor.swift in Sources */,
+				059E728329563B7500C516FF /* Libraries.swift in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
+				059E728729563B7500C516FF /* DetectSkeleton.swift in Sources */,
+				059E727C29563B7500C516FF /* PoseEsitmator.swift in Sources */,
+				059E728629563B7500C516FF /* ArrayExtension.swift in Sources */,
+				059E728929563B7500C516FF /* Interfaces.swift in Sources */,
+				059E728B29563B7500C516FF /* UIIMageExtension.swift in Sources */,
+				F92EF0AAB2C02B543258B4A0 /* FSC_FrameProcessor.m in Sources */,
+				361749EFC87CABBB457D4DE8 /* FSC_FrameProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,10 +447,19 @@
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"-framework",
+					"\"TensorFlowLiteC\"",
+					"-framework",
+					"\"TensorFlowLiteSelectTfOps\"",
+					"-weak_framework",
+					"\"CoreML\"",
+					"-force_load",
+					"$(SRCROOT)/Pods/TensorFlowLiteSelectTfOps/Frameworks/TensorFlowLiteSelectTfOps.xcframework/ios-arm64/TensorFlowLiteSelectTfOps.framework/TensorFlowLiteSelectTfOps",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsc.fullstack;
 				PRODUCT_NAME = nbts;
+				SWIFT_OBJC_BRIDGING_HEADER = "nbts-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -347,10 +483,15 @@
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"-force_load",
+					"$(SRCROOT)/Pods/TensorFlowLiteSelectTfOps/Frameworks/TensorFlowLiteSelectTfOps.xcframework/ios-arm64/TensorFlowLiteSelectTfOps.framework/TensorFlowLiteSelectTfOps",
+					"-u",
+					_TF_AcquireFlexDelegate,
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fsc.fullstack;
 				PRODUCT_NAME = nbts;
+				SWIFT_OBJC_BRIDGING_HEADER = "nbts-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -404,13 +545,28 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = "\"$(inherited)\"";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+					"-framework",
+					"\"TensorFlowLiteC\"",
+					"-framework",
+					"\"TensorFlowLiteSelectTfOps\"",
+					"-weak_framework",
+					"\"CoreML\"",
+					"-force_load",
+					"$(SRCROOT)/Pods/TensorFlowLiteSelectTfOps/Frameworks/TensorFlowLiteSelectTfOps.xcframework/ios-arm64/TensorFlowLiteSelectTfOps.framework/TensorFlowLiteSelectTfOps",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -455,12 +611,23 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
 				LIBRARY_SEARCH_PATHS = "\"$(inherited)\"";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+					"-force_load",
+					"$(SRCROOT)/Pods/TensorFlowLiteSelectTfOps/Frameworks/TensorFlowLiteSelectTfOps.xcframework/ios-arm64/TensorFlowLiteSelectTfOps.framework/TensorFlowLiteSelectTfOps",
+					"-u",
+					_TF_AcquireFlexDelegate,
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

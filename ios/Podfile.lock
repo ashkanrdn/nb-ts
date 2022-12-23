@@ -427,6 +427,22 @@ PODS:
     - React-RCTImage
   - RNSVG (12.1.1):
     - React
+  - TensorFlowLiteC (0.0.1-nightly.20220831):
+    - TensorFlowLiteC/Core (= 0.0.1-nightly.20220831)
+  - TensorFlowLiteC/Core (0.0.1-nightly.20220831)
+  - TensorFlowLiteC/CoreML (0.0.1-nightly.20220831):
+    - TensorFlowLiteC/Core
+  - TensorFlowLiteC/Metal (0.0.1-nightly.20220831):
+    - TensorFlowLiteC/Core
+  - TensorFlowLiteSelectTfOps (0.0.1-nightly.20220831)
+  - TensorFlowLiteSwift/Core (0.0.1-nightly.20220831):
+    - TensorFlowLiteC (= 0.0.1-nightly.20220831)
+  - TensorFlowLiteSwift/CoreML (0.0.1-nightly.20220831):
+    - TensorFlowLiteC/CoreML (= 0.0.1-nightly.20220831)
+    - TensorFlowLiteSwift/Core (= 0.0.1-nightly.20220831)
+  - TensorFlowLiteSwift/Metal (0.0.1-nightly.20220831):
+    - TensorFlowLiteC/Metal (= 0.0.1-nightly.20220831)
+    - TensorFlowLiteSwift/Core (= 0.0.1-nightly.20220831)
   - VisionCamera (2.15.2):
     - React
     - React-callinvoker
@@ -490,6 +506,9 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
+  - TensorFlowLiteSelectTfOps (= 0.0.1-nightly.20220831)
+  - TensorFlowLiteSwift/CoreML (= 0.0.1-nightly.20220831)
+  - TensorFlowLiteSwift/Metal (= 0.0.1-nightly.20220831)
   - VisionCamera (from `../node_modules/react-native-vision-camera`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -509,6 +528,9 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - TensorFlowLiteC
+    - TensorFlowLiteSelectTfOps
+    - TensorFlowLiteSwift
 
 EXTERNAL SOURCES:
   boost:
@@ -696,9 +718,12 @@ SPEC CHECKSUMS:
   RNReanimated: 6d3dc023cec9fd29950baf8cc5f4d0592a623c01
   RNScreens: d6da2b9e29cf523832c2542f47bf1287318b1868
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
+  TensorFlowLiteC: e16055b16d25b31007467e7d15e6560ffab2b880
+  TensorFlowLiteSelectTfOps: 555e336ff5b6fac6d90345f1fab9fec4c529d884
+  TensorFlowLiteSwift: 200ddfbef5db5d58932ff984543109fe145d28d8
   VisionCamera: 83cc8ae355bb52a6cfbd59a357efc54efe88370c
   Yoga: 75bf4b0131cfb46a659cd0c13309b79a6fcff66d
 
-PODFILE CHECKSUM: b39cac52b6c4eb7e320555d441481ab87679bdef
+PODFILE CHECKSUM: 16bd15f8961b66df2847fa923bf0b159b0d64396
 
 COCOAPODS: 1.11.3

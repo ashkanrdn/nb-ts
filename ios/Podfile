@@ -26,6 +26,11 @@ target 'nbts' do
     :app_path => "#{Dir.pwd}/.."
   )
 
+
+  pod 'TensorFlowLiteSwift', '0.0.1-nightly.20220831', :subspecs => ['CoreML', 'Metal']
+  # or 'TensorFlowLiteObjC'
+  pod 'TensorFlowLiteSelectTfOps', '0.0.1-nightly.20220831'
+
   # Uncomment to opt-in to using Flipper
   # Note that if you have use_frameworks! enabled, Flipper will not work
   #
