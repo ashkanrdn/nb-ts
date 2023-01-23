@@ -44,9 +44,8 @@ export async function getAllUserNames() {
 (async () => {
   let x = await getAllUserNames();
   // @ts-ignore
-  console.log(x);
+
   stores.push(x);
-  console.log(stores);
 })();
 
 //------------------------

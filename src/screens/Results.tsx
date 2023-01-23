@@ -18,16 +18,8 @@ export default function Results() {
       {/* rendering the users */}
       <Box justifyContent='space-around' py='1' flex={8}>
         <ScrollView>
-          <ResultScore />
+          <ResultScore score={2} />
         </ScrollView>
-      </Box>
-      <Box flex={1}>
-        <Button
-          onPress={() => {
-            navigation.navigate("AddUser");
-          }}>
-          All Results
-        </Button>
       </Box>
     </Box>
   );
