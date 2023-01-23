@@ -65,22 +65,7 @@ export const AssessmentExercises = proxy([
   },
 ]);
 
-export const Users = proxy([
-  { User_id: 1, User_info: { User_FName: "Betty", User_LName: "West" } },
-  { User_id: 2, User_info: { User_FName: "John ", User_LName: "Adrian" } },
-  { User_id: 3, User_info: { User_FName: "Harriet ", User_LName: "Anderson" } },
-  { User_id: 4, User_info: { User_FName: "james ", User_LName: "blake" } },
-  { User_id: 5, User_info: { User_FName: "jimmy ", User_LName: "peters" } },
-  { User_id: 6, User_info: { User_FName: "mik ", User_LName: "Anderson" } },
-  { User_id: 7, User_info: { User_FName: "peter ", User_LName: "griffin" } },
-  { User_id: 8, User_info: { User_FName: "toby ", User_LName: "mcguire" } },
-  { User_id: 9, User_info: { User_FName: "emily ", User_LName: "parades" } },
-  { User_id: 10, User_info: { User_FName: "juliet ", User_LName: "michael" } },
-  { User_id: 11, User_info: { User_FName: "harry ", User_LName: "styles" } },
-  { User_id: 12, User_info: { User_FName: "Polack ", User_LName: "Novice" } },
-  { User_id: 13, User_info: { User_FName: "Ali ", User_LName: "Dali" } },
-  { User_id: 14, User_info: { User_FName: "Marry ", User_LName: "Bleach" } },
-  { User_id: 15, User_info: { User_FName: "Joseph ", User_LName: "Millay" } },
-]);
+export const stores = proxy([]);
+
 export var currentExercise = proxy({ currentExerciseNum: 0 });
 export const currentResident = proxy({ currentUser_id: 0 });

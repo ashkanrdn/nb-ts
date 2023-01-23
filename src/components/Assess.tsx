@@ -5,6 +5,8 @@ import { Feather, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-ico
 import { useNavigation } from "@react-navigation/native";
 import { useSnapshot, proxy } from "valtio";
 
+import { stores } from "../../App";
+
 import { currentResident } from "../constants/states";
 
 export default function Assess(props: any) {
@@ -12,8 +14,7 @@ export default function Assess(props: any) {
 
   const pressHandler: any = () => {
     navigation.navigate("Detail");
-
-    currentResident.currentUser_id = props.resident.User_id;
+    // currentResident.currentUser_id = props["resident"]["user"];
   };
 
   return (
@@ -31,6 +32,7 @@ export default function Assess(props: any) {
             <Center>
               <Text bold color='cyan.400' fontSize='md'>
                 Assess
+                {props["user"]}
               </Text>
             </Center>
           </Box>

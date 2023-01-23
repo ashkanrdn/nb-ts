@@ -4,18 +4,23 @@ import { Text, Flex, Box } from "native-base";
 var _ = require("lodash");
 
 import Assess from "./Assess";
+import { useSnapshot } from "valtio";
+
+import { stores } from "../constants/states";
+
 const Resident = (props: any) => {
-  const residentInfo = props.user;
+  const snaps = useSnapshot(stores);
+  var keys = props.user;
 
   return (
     <Flex my='4' direction='row' alignItems='center' justifyContent='flex-start' alignContent='center'>
       <Box flex={4}>
         <Text fontSize='xl'>
-          {residentInfo.User_info.User_FName} {residentInfo.User_info.User_LName}
+          {snaps["0"][keys]["first_name"]} {snaps["0"][keys]["last_name"]}
         </Text>
       </Box>
       <Box flex={1}>
-        <Assess resident={residentInfo} />
+        <Assess resident={props} />
       </Box>
     </Flex>
   );

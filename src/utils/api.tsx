@@ -23,7 +23,7 @@ dynamodb.query(params, function (err, data) {
   if (err) console.log(err);
   else {
     console.log(data);
-    console.log(data.Items[0]);
+    console.log(data.Items);
     // console.log(data.Items[1]);
   }
 });

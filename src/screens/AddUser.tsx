@@ -16,16 +16,59 @@ import ExcPreview from "../components/ExcPreview";
 import Play from "../components/Play";
 import { useNavigation } from "@react-navigation/native";
 
+import "react-native-get-random-values";
+const { v4: uuid } = require("uuid");
+
+import { ConfigurationOptions } from "aws-sdk";
+import * as AWS from "aws-sdk";
+
+const configuration: ConfigurationOptions = {
+  region: "us-east-1",
+  secretAccessKey: "2XjyeIzDuXpoR6v+3KEY9KjoT7ROEk8gTxzxdLcM",
+  accessKeyId: "AKIAWRW334WT6CAQXIHD",
+};
+AWS.config.update(configuration);
+
+const dynamodb = new AWS.DynamoDB.DocumentClient();
+
 const userName: string = "Betty";
 export default function AddUser() {
   const navigation = useNavigation();
-
+  const [wasSuccess, setwasSuccess] = React.useState(null);
   const [gender, setGender] = React.useState(null);
   const [fName, setFname] = React.useState(null);
   const [lName, setLname] = React.useState(null);
   const [age, setAge] = React.useState(null);
   const [height, setHeight] = React.useState(null);
   const [weight, setWeight] = React.useState(null);
+
+  // make an object and have the api work on the add user
+
+  var userParams = {
+    first_name: fName,
+    last_name: lName,
+    age: age,
+    gender: gender,
+    height: height,
+    weight: weight,
+  };
+
+  function addUser(userParamsArg: any) {
+    const user_uuid = uuid();
+    var userParams = {
+      TableName: "Smart_Health_Table",
+      Item: {
+        user_id: user_uuid,
+        exercise_id: "0",
+        user_data: userParamsArg,
+      },
+    };
+
+    dynamodb.put(userParams, function (err, data) {
+      if (err) console.log(err);
+      else console.log("User " + user_uuid + " Added Successfully!!");
+    });
+  }
 
   return (
     <Box alignItems='center' safeAreaTop flex={1}>
@@ -42,8 +85,8 @@ export default function AddUser() {
           </Stack>
 
           <Stack mx='4'>
-            <FormControl.Label>Age</FormControl.Label>
-            <Input defaultValue='55' placeholder='55' onChangeText={(text) => setAge(text)} />
+            <FormControl.Label>Date of Birth</FormControl.Label>
+            <Input defaultValue='01/08/1980' placeholder='01/08/1980' onChangeText={(text) => setAge(text)} />
           </Stack>
 
           <Stack mx='4'>
@@ -78,7 +121,12 @@ export default function AddUser() {
         </FormControl>
       </Box>
       <VStack space='3'>
-        <Button>Add User</Button>
+        <Button
+          onPress={() => {
+            addUser(userParams);
+          }}>
+          Add User
+        </Button>
         <Button onPress={navigation.goBack}>Back</Button>
       </VStack>
     </Box>

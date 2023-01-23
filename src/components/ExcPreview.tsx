@@ -9,6 +9,7 @@ import { AssessmentExercises, currentExercise } from "../constants/states";
 import { currentResident } from "../constants/states";
 import { Users } from "../constants/states";
 var _ = require("lodash");
+import { stores } from "../../App";
 
 export default function ExcPreview() {
   const video = React.useRef(null);
@@ -22,7 +23,9 @@ export default function ExcPreview() {
   const currentResidentSnap = useSnapshot(currentResident);
   const allResidentSnap = useSnapshot(Users);
 
-  var residentInfo = _.toPlainObject(allResidentSnap[currentResidentSnap.currentUser_id]);
+  const snaps = useSnapshot(stores);
+  var current_resident_id = currentResidentSnap["currentUser_id"];
+  var current_user_info = snaps["0"][current_resident_id];
 
   const pressHandler: any = () => {
     navigation.navigate("Instructions");
@@ -34,11 +37,12 @@ export default function ExcPreview() {
         <VStack justifyContent='center' alignItems='center' space='1'>
           <Button onPress={navigation.goBack}></Button>
           <Heading>
-            {residentInfo.User_info.User_FName} {residentInfo.User_info.User_LName}
+            {current_user_info.first_name} {current_user_info.last_name}
           </Heading>
           <Heading size='xs'> Assessment # {Excs[excCounter.currentExerciseNum].Exc_id}</Heading>
           <Heading pt='2' size='lg'>
             {Excs[excCounter.currentExerciseNum].Exc_name}
+            {}
           </Heading>
           <Heading size='xs'> {Excs[excCounter.currentExerciseNum].Exc_overview} </Heading>
           <Box style={styles.container} w='full'>

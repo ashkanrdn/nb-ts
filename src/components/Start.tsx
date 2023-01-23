@@ -10,8 +10,6 @@ const excerName: string = "Hi";
 function Start(props: any) {
   const navigation = useNavigation();
 
-  console.log(props.pageName);
-
   const pressHandler: any = () => {
     navigation.navigate(props.pageName);
   };
