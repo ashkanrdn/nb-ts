@@ -65,6 +65,8 @@ export const AssessmentExercises = proxy([
   },
 ]);
 
+export const exercise_result = proxy({});
+
 export const stores = proxy([]);
 
 export var currentExercise = proxy({ currentExerciseNum: 0 });

@@ -5,13 +5,13 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { proxy, useSnapshot } from "valtio";
 import Results from "./src/screens/Results";
-import Assessment from "./src/screens/Assessment-home";
-import AssessmentDetail from "./src/screens/Assessment-detail";
-import AssessmentInstructions from "./src/screens/Assessment-instructions";
-import AssessmentPlay from "./src/screens/Assessment-Play";
-import AppContainer from "./src/Routes/homeStack";
-import Residents from "./src/screens/Residents";
-import AddUser from "./src/screens/AddUser";
+// import Assessment from "./src/screens/Assessment-home";
+// import AssessmentDetail from "./src/screens/Assessment-detail";
+// import AssessmentInstructions from "./src/screens/Assessment-instructions";
+// import AssessmentPlay from "./src/screens/Assessment-Play";
+// import AppContainer from "./src/Routes/homeStack";
+// import Residents from "./src/screens/Residents";
+// import AddUser from "./src/screens/AddUser";
 
 //------------------------------
 
@@ -37,12 +37,12 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name='Results' component={Results} />
-          <Stack.Screen name='Residents' component={Residents} />
+          {/* <Stack.Screen name='Residents' component={Residents} />
           <Stack.Screen name='Home' component={Assessment} />
           <Stack.Screen name='AddUser' component={AddUser} />
           <Stack.Screen name='Play' component={AssessmentPlay} />
           <Stack.Screen name='Detail' component={AssessmentDetail} />
-          <Stack.Screen name='Instructions' component={AssessmentInstructions} />
+          <Stack.Screen name='Instructions' component={AssessmentInstructions} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
